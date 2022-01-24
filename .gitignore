@@ -1,3 +1,13 @@
+# dont leak student data
+canvas_grade_export
+clean_attendance_csv.R
+student_rosters/bas479_section004.csv
+student_rosters/bas479_section005.csv
+attendance_results/*
+
+# dsstoreeeee
+*.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history
