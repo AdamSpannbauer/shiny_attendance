@@ -26,7 +26,7 @@ ui <- fluidPage(
       actionButton(
         "write_absences",
         label = "submit",
-        icon = icon("send")
+        icon = icon("send", verify_fa = FALSE)
       )
     )
   )

@@ -37,7 +37,7 @@ server <- function(input, output) {
   )
 
   absent_df <- reactive(
-    student_df[absent_idxs(), ]
+    selected_roster_df()[absent_idxs(), ]
   )
 
   output$absent_list <- renderPrint({
