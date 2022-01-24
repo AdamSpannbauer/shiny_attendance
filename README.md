@@ -5,6 +5,7 @@ A quick, minimal R Shiny app to demo Shiny and help with attendance
 <p align='center'>
   <img src='readme/app_screenshot.png' width=60%>
 </p>
+
 ## Usage
 
 ### Initial setup
