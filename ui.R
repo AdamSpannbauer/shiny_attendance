@@ -16,17 +16,19 @@ ui <- fluidPage(
       ),
       DT::dataTableOutput("student_dt"),
       hr(),
-      h2("Absent:"),
+      h4("Students currently marked absent:"),
       verbatimTextOutput("absent_list"),
-      textInput(
-        "output_label",
-        "Output file label:",
-        "absent_students"
-      ),
-      actionButton(
-        "write_absences",
-        label = "submit",
-        icon = icon("send", verify_fa = FALSE)
+      inputPanel(
+        textInput(
+          "output_label",
+          "Output file label:",
+          "absent_students"
+        ),
+        actionButton(
+          "write_absences",
+          label = "submit",
+          icon = icon("send", verify_fa = FALSE)
+        )
       )
     )
   )

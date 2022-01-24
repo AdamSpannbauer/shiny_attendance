@@ -30,7 +30,7 @@ server <- function(input, output) {
 
   output$student_dt <- DT::renderDataTable({
     selected_roster_df()
-  })
+  }, options = list(pageLength = 5))
 
   absent_idxs <- reactive(
     input$student_dt_rows_selected
