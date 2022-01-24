@@ -32,9 +32,15 @@ server <- function(input, output) {
     selected_roster_df()
   }, options = list(pageLength = 5))
 
-  absent_idxs <- reactive(
-    input$student_dt_rows_selected
-  )
+  absent_idxs <- reactive({
+    absent_idxs = input$student_dt_rows_selected
+    if (input$selected_is_absent == "Present") {
+      all_row_nums = 1:nrow(selected_roster_df())
+      absent_idxs = setdiff(all_row_nums, absent_idxs)
+    }
+
+    absent_idxs
+  })
 
   absent_df <- reactive(
     selected_roster_df()[absent_idxs(), ]
